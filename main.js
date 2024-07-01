@@ -3,6 +3,7 @@ import javascriptLogo from './javascript.svg';
 import viteLogo from '/vite.svg';
 import { environmentsComponent } from './src/conceps/01-environments';
 import { callbacksComponent } from './src/conceps/02-callbacks';
+import { promiseComponent } from './src/conceps/03-promises.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -23,4 +24,6 @@ document.querySelector('#app').innerHTML = `
 
 const element = document.querySelector('.card');
 //El element es el elemento HTML en el cual queremos hacer la inserción. 
-callbacksComponent( element );
+// environmentsComponent(element);
+// callbacksComponent( element );
+promiseComponent( element );
