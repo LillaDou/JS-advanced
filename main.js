@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import { environmentsComponent } from './src/conceps/01-environments';
 import { callbacksComponent } from './src/conceps/02-callbacks';
 import { promiseComponent } from './src/conceps/03-promises.js';
+import { promiseRaceComponent } from './src/conceps/04-promise-race.js.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -26,4 +27,5 @@ const element = document.querySelector('.card');
 //El element es el elemento HTML en el cual queremos hacer la inserción. 
 // environmentsComponent(element);
 // callbacksComponent( element );
-promiseComponent( element );
+// promiseComponent( element );
+promiseRaceComponent( element );
