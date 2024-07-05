@@ -8,6 +8,7 @@ import { promiseRaceComponent } from './src/conceps/04-promise-race.js.js';
 import { asyncComponent } from './src/conceps/05-async.js';
 import { asyncAwaitComponent } from './src/conceps/06-async-await.js';
 import { asyncAwait2Component } from './src/conceps/07-async-await.js';
+import { forAwaitComponent } from './src/conceps/08-for-await.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -34,4 +35,5 @@ const element = document.querySelector('.card');
 // promiseRaceComponent( element );
 // asyncComponent( element );
 // asyncAwaitComponent( element );
-asyncAwait2Component( element );
+// asyncAwait2Component( element );
+forAwaitComponent( element );
