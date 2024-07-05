@@ -5,16 +5,32 @@
  */
 export const generatorFunctionsComponent = ( element ) => {
 
-    const myGenerator = myFirstGeneratorFunction();
+    // const myGenerator = myFirstGeneratorFunction();
+    // console.log( myGenerator.next() );//Primer valor done: false
+    const genId = idGenerator();
 
-    console.log( myGenerator.next() );//Primer valor done: false
-    console.log( myGenerator.next() );//Segundo valor done: false
-    console.log( myGenerator.next() );//Tercer valor done: false
-    console.log( myGenerator.next() );//Cuarto valor done: false
-    console.log( myGenerator.next() );//Ya no hay valores done: true
-    console.log( myGenerator.next() );//undefined done: true
+    const button = document.createElement('button');
+    button.innerText = 'Click me';
+    element.append( button );
 
-//La función generadora permite generar una secuencia de valores
+    const renderButton = () => {
+        const { value } = genId.next();
+        button.innerText = `Click ${ value }`;
+    }
+
+    button.addEventListener('click', renderButton );
+
+    //Hemos creado un contador de las veces que hacemos click en el botón
+
+}
+
+function* idGenerator( ) {
+
+    let currentId = 0;
+    while(true) {
+        yield ++currentId;
+    }
+
 }
 
 function* myFirstGeneratorFunction() {
