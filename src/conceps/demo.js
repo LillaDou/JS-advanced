@@ -2,10 +2,10 @@
 
 /**
  * 
- * @param {HTMLDivElement} element Elemento HTML
+ * @param {HTMLDivElement} element 
  */
 export const demoComponent = ( element ) => {
 
-  console.log('demoComponent');
-  
+    console.log('demoComponent');
+
 }
